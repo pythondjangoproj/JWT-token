@@ -121,9 +121,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+import datetime
 JWT_AUTH={
     'JWT_ALLOW_REFRESH':True,
-    'JWT_AUTH_HEADER_PREFIX':'Bearer'
+    'JWT_AUTH_HEADER_PREFIX':'Bearer',
+    'JWT_EXPIRATION_DELTA':datetime.timedelta(seconds=300),
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=15),
+
 }
 
 # Default primary key field type
