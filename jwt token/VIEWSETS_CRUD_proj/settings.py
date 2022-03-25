@@ -123,6 +123,7 @@ STATIC_URL = '/static/'
 
 JWT_AUTH={
     'JWT_ALLOW_REFRESH':True,
+    'JWT_AUTH_HEADER_PREFIX':'Bearer'
 }
 
 # Default primary key field type
